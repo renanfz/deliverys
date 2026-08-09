@@ -12,7 +12,7 @@ export const DeliveryItem = ({ id, customer, order, routeId, address, nfe, latit
                className="flex items-center rounded-lg bg-[#F6F6F7] p-4 mb-2 w-full">
                <span className="text-sm font-mono text-slate-600 mr-4">#{order}</span>
                <p className="text-base font-normal text-slate-800">{customer}</p>
-               {status === 'pending' ? <Circle color="#ababab"/> : <CircleCheck color="#16A34A" />}
+               {status === 'pending' ? <Circle color="#ababab" /> : <CircleCheck color="#16A34A" />}
           </article >
      )
 }

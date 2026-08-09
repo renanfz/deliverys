@@ -104,12 +104,13 @@ export async function calculateDeliverys(url: string) {
 
 
 export async function changeStatus(url: string, id: string | number) {
+     const delivery = await getDeliverieUnique(url, id)
 
      try {
           const response = await fetch(`${url}/deliveries/${id}`, {
                method: 'PATCH',
                headers: { "Content-Type": "application/json" },
-               body: JSON.stringify({ status: "completed" })
+               body: JSON.stringify({ status: delivery.status !== 'pending' ? 'pending': 'completed' })
           })
           if (!response.ok) {
                throw new Error('Erro ao alterar status')
@@ -122,8 +123,6 @@ export async function changeStatus(url: string, id: string | number) {
 
 
 }
-
-console.log(await changeStatus(url, 1))
 
 
 

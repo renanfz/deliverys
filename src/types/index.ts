@@ -30,6 +30,7 @@ export type Delivery = {
   longitude: string
   status: DeliveryStatus
   nfe: Nfe
+  progress?: string | null
 }
 
 type Route = {

@@ -57,7 +57,7 @@
       "address": "Praça Central, 45 - Centro, Bom Repouso - MG",
       "latitude": -22.4779,
       "longitude": -46.1438,
-      "status": "pending",
+      "status": "completed",
       "nfe": 125876
     },
     {
@@ -68,7 +68,7 @@
       "address": "Rua do Comércio, 88 - Centro, Bom Repouso - MG",
       "latitude": -22.4765,
       "longitude": -46.145,
-      "status": "pending",
+      "status": "completed",
       "nfe": 125877
     },
     {
@@ -83,7 +83,7 @@
       "nfe": 125878
     },
     {
-      "id": "6",
+      "id": "22",
       "routeId": 1,
       "order": 5,
       "customer": "Casa de Carnes Boi Gordo",
@@ -101,7 +101,7 @@
       "address": "Rua José de Alencar, 120 - Jardim América, Pouso Alegre - MG",
       "latitude": -22.2231,
       "longitude": -45.9224,
-      "status": "pending",
+      "status": "completed",
       "nfe": 125879
     },
     {
@@ -112,7 +112,7 @@
       "address": "Rua Francisco Júlio Pereira, 50 - Santa Fé, Pouso Alegre - MG",
       "latitude": -22.2471,
       "longitude": -45.9412,
-      "status": "pending",
+      "status": "completed",
       "nfe": 125880
     },
     {
@@ -123,7 +123,7 @@
       "address": "Rodovia Fernão Dias, Km 851 - Zona Industrial, Pouso Alegre - MG",
       "latitude": -22.2615,
       "longitude": -45.955,
-      "status": "pending",
+      "status": "completed",
       "nfe": 125881
     },
     {
@@ -134,7 +134,7 @@
       "address": "Avenida Adalberto Ferraz, 47 - Centro, Pouso Alegre - MG",
       "latitude": -22.2301,
       "longitude": -45.9342,
-      "status": "pending",
+      "status": "completed",
       "nfe": 125882
     },
     {
@@ -145,7 +145,7 @@
       "address": "Avenida Prefeito Tuany Toledo, 301 - Fátima, Pouso Alegre - MG",
       "latitude": -22.2255,
       "longitude": -45.9188,
-      "status": "pending",
+      "status": "completed",
       "nfe": 125883
     },
     {
