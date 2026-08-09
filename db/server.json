@@ -1,0 +1,318 @@
+{
+  "routes": [
+    {
+      "id": "1",
+      "city": "Bom Repouso",
+      "date": "11/08/2026"
+    },
+    {
+      "id": "2",
+      "city": "Pouso Alegre",
+      "date": "11/08/2026"
+    },
+    {
+      "id": "3",
+      "city": "Estiva",
+      "date": "12/08/2026"
+    },
+    {
+      "id": "4",
+      "city": "Cambuí",
+      "date": "12/08/2026"
+    },
+    {
+      "id": "5",
+      "city": "Paraisópolis",
+      "date": "13/08/2026"
+    }
+  ],
+  "deliveries": [
+    {
+      "id": "1",
+      "routeId": 1,
+      "order": 1,
+      "customer": "Supermercado Geraldo II",
+      "address": "Rua Minas Gerais, 110 - Centro, Bom Repouso - MG",
+      "latitude": -22.4772,
+      "longitude": -46.1444,
+      "status": "completed",
+      "nfe": 125874
+    },
+    {
+      "id": "2",
+      "routeId": 1,
+      "order": 2,
+      "customer": "Mercearia Dora e Eduardo",
+      "address": "Rua Bela Vista, 7 - Campo Alegre, Bom Repouso - MG",
+      "latitude": -22.4741,
+      "longitude": -46.1415,
+      "status": "completed",
+      "nfe": 125875
+    },
+    {
+      "id": "3",
+      "routeId": 1,
+      "order": 3,
+      "customer": "Supermercado Marques",
+      "address": "Praça Central, 45 - Centro, Bom Repouso - MG",
+      "latitude": -22.4779,
+      "longitude": -46.1438,
+      "status": "pending",
+      "nfe": 125876
+    },
+    {
+      "id": "4",
+      "routeId": 1,
+      "order": 4,
+      "customer": "Padaria e Confeitaria Real",
+      "address": "Rua do Comércio, 88 - Centro, Bom Repouso - MG",
+      "latitude": -22.4765,
+      "longitude": -46.145,
+      "status": "pending",
+      "nfe": 125877
+    },
+    {
+      "id": "5",
+      "routeId": 1,
+      "order": 5,
+      "customer": "Casa de Carnes Boi Gordo",
+      "address": "Avenida principal, 200 - Centro, Bom Repouso - MG",
+      "latitude": -22.4782,
+      "longitude": -46.1462,
+      "status": "pending",
+      "nfe": 125878
+    },
+    {
+      "id": "6",
+      "routeId": 1,
+      "order": 5,
+      "customer": "Casa de Carnes Boi Gordo",
+      "address": "Avenida principal, 200 - Centro, Bom Repouso - MG",
+      "latitude": -22.4782,
+      "longitude": -46.1462,
+      "status": "pending",
+      "nfe": 125878
+    },
+    {
+      "id": "6",
+      "routeId": 2,
+      "order": 1,
+      "customer": "Supermercado América",
+      "address": "Rua José de Alencar, 120 - Jardim América, Pouso Alegre - MG",
+      "latitude": -22.2231,
+      "longitude": -45.9224,
+      "status": "pending",
+      "nfe": 125879
+    },
+    {
+      "id": "7",
+      "routeId": 2,
+      "order": 2,
+      "customer": "Economart Atacadista",
+      "address": "Rua Francisco Júlio Pereira, 50 - Santa Fé, Pouso Alegre - MG",
+      "latitude": -22.2471,
+      "longitude": -45.9412,
+      "status": "pending",
+      "nfe": 125880
+    },
+    {
+      "id": "8",
+      "routeId": 2,
+      "order": 3,
+      "customer": "Mart Minas Atacado",
+      "address": "Rodovia Fernão Dias, Km 851 - Zona Industrial, Pouso Alegre - MG",
+      "latitude": -22.2615,
+      "longitude": -45.955,
+      "status": "pending",
+      "nfe": 125881
+    },
+    {
+      "id": "9",
+      "routeId": 2,
+      "order": 4,
+      "customer": "Bar do Tibúrcio (Mercado Municipal)",
+      "address": "Avenida Adalberto Ferraz, 47 - Centro, Pouso Alegre - MG",
+      "latitude": -22.2301,
+      "longitude": -45.9342,
+      "status": "pending",
+      "nfe": 125882
+    },
+    {
+      "id": "10",
+      "routeId": 2,
+      "order": 5,
+      "customer": "Supermercado ABC",
+      "address": "Avenida Prefeito Tuany Toledo, 301 - Fátima, Pouso Alegre - MG",
+      "latitude": -22.2255,
+      "longitude": -45.9188,
+      "status": "pending",
+      "nfe": 125883
+    },
+    {
+      "id": "11",
+      "routeId": 3,
+      "order": 1,
+      "customer": "Supermercado Geraldo I",
+      "address": "Avenida Perimetral Pedro Pereira Borges, 10 - Centro, Estiva - MG",
+      "latitude": -22.4642,
+      "longitude": -46.021,
+      "status": "pending",
+      "nfe": 125884
+    },
+    {
+      "id": "12",
+      "routeId": 3,
+      "order": 2,
+      "customer": "Mercearia Santo Antônio",
+      "address": "Rua Ver. José Ferreira, 45 - Centro, Estiva - MG",
+      "latitude": -22.465,
+      "longitude": -46.0195,
+      "status": "pending",
+      "nfe": 125885
+    },
+    {
+      "id": "13",
+      "routeId": 3,
+      "order": 3,
+      "customer": "Padaria Central de Estiva",
+      "address": "Praça Francisco Ribeiro, 12 - Centro, Estiva - MG",
+      "latitude": -22.4638,
+      "longitude": -46.0202,
+      "status": "pending",
+      "nfe": 125886
+    },
+    {
+      "id": "14",
+      "routeId": 3,
+      "order": 4,
+      "customer": "Comercial de Doces Estiva",
+      "address": "Rua Prefeito Ribeiro, 150 - Centro, Estiva - MG",
+      "latitude": -22.4661,
+      "longitude": -46.0225,
+      "status": "pending",
+      "nfe": 125887
+    },
+    {
+      "id": "15",
+      "routeId": 3,
+      "order": 5,
+      "customer": "Hortifrúti Direto do Campo",
+      "address": "Rua Capitão Assis, 77 - Centro, Estiva - MG",
+      "latitude": -22.4629,
+      "longitude": -46.0188,
+      "status": "pending",
+      "nfe": 125888
+    },
+    {
+      "id": "16",
+      "routeId": 4,
+      "order": 1,
+      "customer": "Cambuí Supermercados",
+      "address": "Avenida do Carmo, 320 - Centro, Cambuí - MG",
+      "latitude": -22.6105,
+      "longitude": -46.0592,
+      "status": "pending",
+      "nfe": 125889
+    },
+    {
+      "id": "17",
+      "routeId": 4,
+      "order": 2,
+      "customer": "Supermercado Alvorada",
+      "address": "Rua Governador Valadares, 85 - Centro, Cambuí - MG",
+      "latitude": "-22.472580754965403",
+      "longitude": "-46.14341834778917",
+      "status": "pending",
+      "nfe": 125890
+    },
+    {
+      "id": "18",
+      "routeId": 4,
+      "order": 3,
+      "customer": "Mercearia Avenida",
+      "address": "Avenida Tiradentes, 500 - Centro, Cambuí - MG",
+      "latitude": -22.6088,
+      "longitude": -46.0615,
+      "status": "pending",
+      "nfe": 125891
+    },
+    {
+      "id": "19",
+      "routeId": 4,
+      "order": 4,
+      "customer": "Laticínios Sul de Minas",
+      "address": "Praça da Matriz, 14 - Centro, Cambuí - MG",
+      "latitude": -22.6111,
+      "longitude": -46.0578,
+      "status": "pending",
+      "nfe": 125892
+    },
+    {
+      "id": "20",
+      "routeId": 4,
+      "order": 5,
+      "customer": "Frigorífico Cambuí",
+      "address": "Rua João Pinheiro, 204 - Centro, Cambuí - MG",
+      "latitude": -22.6135,
+      "longitude": -46.0545,
+      "status": "pending",
+      "nfe": 125893
+    },
+    {
+      "id": "21",
+      "routeId": 5,
+      "order": 1,
+      "customer": "Supermercado Central de Paraisópolis",
+      "address": "Rua Sete de Setembro, 245 - Centro, Paraisópolis - MG",
+      "latitude": -22.5542,
+      "longitude": -45.7785,
+      "status": "pending",
+      "nfe": 125894
+    },
+    {
+      "id": "22",
+      "routeId": 5,
+      "order": 2,
+      "customer": "Mercearia do Vale",
+      "address": "Avenida Guarda Mor Cunha, 90 - Centro, Paraisópolis - MG",
+      "latitude": -22.5518,
+      "longitude": -45.782,
+      "status": "pending",
+      "nfe": 125895
+    },
+    {
+      "id": "23",
+      "routeId": 5,
+      "order": 3,
+      "customer": "Casa de Massas Paraíso",
+      "address": "Rua Bueno Brandão, 14 - Centro, Paraisópolis - MG",
+      "latitude": -22.5555,
+      "longitude": -45.7762,
+      "status": "pending",
+      "nfe": 125896
+    },
+    {
+      "id": "24",
+      "routeId": 5,
+      "order": 4,
+      "customer": "Distribuidora de Bebidas União",
+      "address": "Rua Coronel Ribeiro, 310 - Centro, Paraisópolis - MG",
+      "latitude": -22.5529,
+      "longitude": -45.7799,
+      "status": "pending",
+      "nfe": 125897
+    },
+    {
+      "id": "25",
+      "routeId": 5,
+      "order": 5,
+      "customer": "Sacolão da Economia",
+      "address": "Praça Sagrada Família, 50 - Centro, Paraisópolis - MG",
+      "latitude": -22.5561,
+      "longitude": -45.7749,
+      "status": "pending",
+      "nfe": 125898
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
