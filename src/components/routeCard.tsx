@@ -12,20 +12,38 @@ export const RouteCard = ({ id, city, deliveryes, completeds, progress }: CardDe
      return (
           <article key={id}
                onClick={() => navigate(`/route?id=${id}&progress=${progress}`)}
-               className="max-w-sm rounded-lg bg-[#F6F6F7] p-4 mb-3">
-               <h2 className="text-base font-bold text-slate-800 mb-2">{city}</h2>
-               <div className="">
-                    <p className="mt-1 text-sm text-slate-500"> {completeds} / {deliveryes}</p>
-                    <p className='mt-1 text-sm text-slate-500'>Concluídas</p>
+               className="max-w-sm rounded-xl p-5 mb-3 bg-[#F6F6F7]">
+               <h2 className="font-bold text-slate-800 mb-4 text-[1.4rem]">{city}</h2>
+               <div className="mb-4 flex items-center justify-between gap-3">
+                    <div className="flex-1">
+                         <p className="text-lg font-semibold text-slate-400">
+                              <span className='font-semibold text-black text-2xl'>{completeds}</span>/{deliveryes}
+                         </p>
+                         <p className='mt-1 text-slate-500'>Concluídas</p>
+                    </div>
+                    <div className="flex-1 text-right">
+                         <p className="text-lg font-semibold text-slate-800">{progress}%</p>
+                         <p className="mt-1 text-slate-500">Progresso</p>
+                    </div>
                </div>
-               <div className="">
-                    {progress}%
-                    <p>Progresso</p> 
+
+               <progress
+                    value="65"
+                    max="100"
+                    className="w-full h-1.5 rounded-full overflow-hidden appearance-none
+                   bg-gray-200 
+                   [&::-webkit-progress-bar]:bg-gray-200
+                   [&::-webkit-progress-value]:bg-[#16A34A]
+                   [&::-moz-progress-bar]:bg-[#16A34A]">
+               </progress>
+
+
+               <div className="flex justify-between items-center mt-3">
+                    <a
+                         className="font-semibold text-[#16A34A]"
+                    >Abrir rota</a>
+                    <ChevronRight color="#16A34A" />
                </div>
-               <progress value={progress} max={100}>{}</progress>
-               <a
-                    className="mt-4 inline-flex w-fit items-center justify-center rounded-lg py-2.5 text-sm font-semibold text-black transition-colors hover:text-blue-600"
-               >Abrir rota <ChevronRight color="#000000" /></a>
           </article>
      )
 
