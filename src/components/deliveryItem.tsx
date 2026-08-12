@@ -7,8 +7,9 @@ export const DeliveryItem = ({ id, customer, order, routeId, address, nfe, latit
      const navigate = useNavigate()
 
      return (
-          <article /* onClick={() => navigate('/delivery', {state: {routeId: routeId, order: order, id: id}})} */
+          <article
                onClick={() => navigate('/delivery', { state: { id, customer, order, routeId, address, nfe, latitude, longitude, status } })}
+
                className="flex items-center rounded-lg bg-[#F6F6F7] p-4 mb-2 w-full">
                <span className="text-sm font-mono text-slate-600 mr-4">#{order}</span>
                <p className="text-base font-normal text-slate-800">{customer}</p>

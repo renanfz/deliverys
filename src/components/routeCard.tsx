@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { CardDelivery } from '../types/index'
 import { ChevronRight, SquareArrowOutUpRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import '../index.css'
 
 export const RouteCard = ({ id, city, deliveryes, completeds, progress }: CardDelivery) => {
 
@@ -12,18 +13,18 @@ export const RouteCard = ({ id, city, deliveryes, completeds, progress }: CardDe
      return (
           <article key={id}
                onClick={() => navigate(`/route?id=${id}&progress=${progress}`)}
-               className="max-w-sm rounded-xl p-5 mb-3 bg-[#F6F6F7]">
+               className="max-w-sm p-5 mb-3 bg-[(--color-surface)] rounded-md card-hover shadow-sm">
                <h2 className="font-bold text-slate-800 mb-4 text-[18px]">{city}</h2>
                <div className="mb-4 flex items-center justify-between gap-3">
                     <div className="flex-1">
-                         <p className="text-lg font-semibold text-slate-400">
-                              <span className='font-semibold text-black text-2xl'>{completeds}</span>/{deliveryes}
+                         <p className="text-lg font-semibold text-(--color-text-secondary)">
+                              <span className='font-semibold text-(--color-text-primary)'>{completeds}</span>/{deliveryes}
                          </p>
-                         <p className='mt-1 text-[#3c3c43]'>Concluídas</p>
+                         <p className='mt-1 text-(--color-text-secondary)'>Concluídas</p>
                     </div>
                     <div className="flex-1 text-right">
-                         <p className="text-lg font-semibold text-slate-800">{progress}%</p>
-                         <p className="mt-1 text-[#3c3c43]">Progresso</p>
+                         <p className="text-lg font-semibold text-(--color-text-primary)">{progress}%</p>
+                         <p className="mt-1 text-(--color-text-secondary)">Progresso</p>
                     </div>
                </div>
 
@@ -31,16 +32,16 @@ export const RouteCard = ({ id, city, deliveryes, completeds, progress }: CardDe
                     value={progress}
                     max="100"
                     className="w-full h-1.5 rounded-full overflow-hidden appearance-none
-                   bg-gray-200 
-                   [&::-webkit-progress-bar]:bg-gray-200
-                   [&::-webkit-progress-value]:bg-[#16A34A]
-                   [&::-moz-progress-bar]:bg-[#16A34A]">
+                             bg-gray-200
+                             [&::-webkit-progress-bar]:bg-gray-200
+                             [&::-webkit-progress-value]:bg-(--color-primary)
+                             [&::-moz-progress-bar]:bg-[(--color-primary)]">
                </progress>
 
 
                <div className="flex justify-between items-center mt-3">
                     <a
-                         className="font-semibold text-[#16A34A]"
+                         className="font-semibold text-(--color-primary) btn-press"
                     >Abrir rota</a>
                     <ChevronRight color="#16A34A" />
                </div>

@@ -86,8 +86,19 @@ export const RoutePage = () => {
                               {selectedRoute.completeds} / {selectedRoute.total} entregas concluídas
                          </p>
                          <div>
-                              <p>Progresso da rota {progress}%</p>
-                              <progress value={progress ?? 0} max={100}></progress>
+                              <div className="flex justify-between mt-5">
+                                   <p>Progresso da rota</p>
+                                   <p className='text-(--color-primary) font-medium'>{progress}%</p>
+                              </div>
+                              <progress
+                                   value={progress ?? 0}
+                                   max="100"
+                                   className="w-full h-1.5 rounded-full overflow-hidden appearance-none
+                             bg-gray-200
+                             [&::-webkit-progress-bar]:bg-gray-200
+                             [&::-webkit-progress-value]:bg-(--color-primary)
+                             [&::-moz-progress-bar]:bg-[(--color-primary)]">
+                              </progress>
                          </div>
                     </header>
                     {/* Listagem das entregas */}
