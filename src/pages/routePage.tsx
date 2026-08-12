@@ -78,7 +78,7 @@ export const RoutePage = () => {
                          <button
                               type='button'
                               onClick={() => navigate('/')}
-                              className='mx-auto my-auto w-20 h-10'>
+                              className=' my-auto w-20 h-10 flex text'>
                               <ChevronLeft /> Rotas
                          </button>
                          <h2 className='text-lg font-bold text-slate-800'>{selectedRoute.city}</h2>

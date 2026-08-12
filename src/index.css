@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
+/* Importa a fonte Inter com suporte a variáveis de peso (100 a 900) */
 @import url('https://googleapis.com');
 
 @theme {
-     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
