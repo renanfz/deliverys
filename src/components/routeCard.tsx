@@ -13,7 +13,7 @@ export const RouteCard = ({ id, city, deliveryes, completeds, progress }: CardDe
      return (
           <article key={id}
                onClick={() => navigate(`/route?id=${id}&progress=${progress}`)}
-               className="max-w-sm p-5 mb-3 bg-[(--color-surface)] rounded-md card-hover shadow-sm">
+               className="max-w-sm p-5 mb-3 bg-[#F6F6F7] rounded-md card-hover shadow-sm">
                <h2 className="font-bold text-slate-800 mb-4 text-[18px]">{city}</h2>
                <div className="mb-4 flex items-center justify-between gap-3">
                     <div className="flex-1">

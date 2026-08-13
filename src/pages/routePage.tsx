@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { DeliveryItem } from '../components/deliveryItem'
-import { getDeliveriesById, getRouteUnique, url } from '../services/api'
+import { calculateDeliverys, getDeliveriesById, getRouteUnique, url } from '../services/api'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { ChevronLeft } from 'lucide-react'
 import type { Delivery } from '../types/index'
@@ -25,7 +25,12 @@ export const RoutePage = () => {
      const navigate = useNavigate()
 
      useEffect(() => {
-          setProgress(progressParam)
+/*           setProgress(progressParam) */
+          const fetchData = async () => {
+               const data = await calculateDeliverys(url)
+               setProgress(data.progress)
+          }
+          fetchData()
      }, [progressParam])
 
      useEffect(() => {
@@ -78,12 +83,12 @@ export const RoutePage = () => {
                          <button
                               type='button'
                               onClick={() => navigate('/')}
-                              className=' my-auto w-20 h-10 flex text'>
+                              className=' my-auto w-20 h-10 flex text gap-1'>
                               <ChevronLeft /> Rotas
                          </button>
-                         <h2 className='text-lg font-bold text-slate-800'>{selectedRoute.city}</h2>
+                         <h2 className='text-lg font-bold text-slate-800 mb-2'>{selectedRoute.city}</h2>
                          <p className='text-sm text-slate-500'>
-                              {selectedRoute.completeds} / {selectedRoute.total} entregas concluídas
+                              <span className='text-black font-medium'>{selectedRoute.completeds}</span> / {selectedRoute.total} entregas concluídas
                          </p>
                          <div>
                               <div className="flex justify-between mt-5">

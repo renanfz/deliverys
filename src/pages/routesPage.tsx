@@ -7,6 +7,14 @@ import '../index.css'
 
 export const RoutesPage = () => {
      const [routesData, setRoutesData] = useState<any[]>([])
+     const [routeActive, setRouteActive] = useState(0)
+
+     useEffect(() => {
+          const total = routesData.reduce((acc, route) => acc + route.completeds, 0);
+          setRouteActive(total);
+     }, [routesData]); // Executa sempre que os dados das rotas mudarem
+
+
      useEffect(() => {
           const fetchData = async () => {
                const data = await calculateDeliverys(url)
@@ -22,8 +30,6 @@ export const RoutesPage = () => {
      });
      const dateFormated = dataFormatada.replace(/(^\w|\s\w)/g, m => m.toUpperCase())
 
-     let calculate = routesData.map(item => item)
-     console.log(calculate)
      return (
           <div className="h-screen w-full flex flex-col items-center p-5">
                <div className="w-full max-w-100">
@@ -36,7 +42,7 @@ export const RoutesPage = () => {
                     <div className='bg-[var(--color-primary-light)] flex w-full p-4 rounded-[var(--radius-md)] justify-between items-center'>
                          <Package color="#737373" />Total de entregas    15/20{ }
                     </div>
-                    <p className='py-5 text-[var(--color-text-secondary)] font-medium'>{ } 3 ROTAS ATIVAS</p>
+                    <p className='py-5 text-[var(--color-text-secondary)] font-medium'>{ routeActive} 3 ROTAS ATIVAS</p>
                     {routesData.map((route) => (
                          <RouteCard
                               key={route.id}

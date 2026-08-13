@@ -35,7 +35,7 @@
       "address": "Rua Minas Gerais, 110 - Centro, Bom Repouso - MG",
       "latitude": -22.4772,
       "longitude": -46.1444,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125874
     },
     {
@@ -90,7 +90,7 @@
       "address": "Avenida principal, 200 - Centro, Bom Repouso - MG",
       "latitude": -22.4782,
       "longitude": -46.1462,
-      "status": "pending",
+      "status": "completed",
       "nfe": 125878
     },
     {
@@ -211,7 +211,7 @@
       "address": "Avenida do Carmo, 320 - Centro, Cambuí - MG",
       "latitude": -22.6105,
       "longitude": -46.0592,
-      "status": "pending",
+      "status": "completed",
       "nfe": 125889
     },
     {
