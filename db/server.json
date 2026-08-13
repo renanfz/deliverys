@@ -101,7 +101,7 @@
       "address": "Rua José de Alencar, 120 - Jardim América, Pouso Alegre - MG",
       "latitude": -22.2231,
       "longitude": -45.9224,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125879
     },
     {
@@ -156,7 +156,7 @@
       "address": "Avenida Perimetral Pedro Pereira Borges, 10 - Centro, Estiva - MG",
       "latitude": -22.4642,
       "longitude": -46.021,
-      "status": "pending",
+      "status": "completed",
       "nfe": 125884
     },
     {
@@ -167,7 +167,7 @@
       "address": "Rua Ver. José Ferreira, 45 - Centro, Estiva - MG",
       "latitude": -22.465,
       "longitude": -46.0195,
-      "status": "pending",
+      "status": "completed",
       "nfe": 125885
     },
     {

@@ -10,13 +10,13 @@ export const DeliveryItem = ({ id, customer, order, routeId, address, nfe, latit
           <article
                onClick={() => navigate('/delivery', { state: { id, customer, order, routeId, address, nfe, latitude, longitude, status } })}
 
-               className="flex items-center rounded-lg bg-[#F6F6F7] p-3 mb-2 w-full ">
+               className="flex items-center rounded-md bg-gray-100 p-3 mb-2.5 w-full shadow-sm ">
                <span
-                    className={`flex text-sm font-mono text-slate-600 mr-4  h-8 w-8 items-center justify-center rounded-sm ${status === 'pending' ? 'bg-gray-200' : 'bg-(--color-primary-light)'}`}>{order}
+                    className={`flex text-sm font-medium text-slate-600 mr-4  h-8 w-8 items-center justify-center rounded-sm ${status === 'pending' ? 'bg-white' : 'bg-(--color-primary-light)'}`}>{order}
                </span>
                <p className="text-base font-normal text-slate-800">{customer}</p>
                <span className='flex ml-auto'>
-                    {status === 'pending' ? <Circle color="#ababab" /> : <CircleCheck color="#16A34A" />}
+                    {status === 'pending' ? <Circle color="#cacaca" /> : <CircleCheck color="#16A34A" />}
                </span>
           </article>
      )

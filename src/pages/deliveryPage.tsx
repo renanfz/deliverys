@@ -61,7 +61,7 @@ export function DeliveryPage() {
                                         ? 'bg-gray-100'
                                         : 'bg-(--color-primary-light) text-(--color-primary)'}`}>{dataDelivery?.status}
                          </span>
-                         <h2 className="font-mono text-2xl font-bold text-slate-800 py-5">{dataDelivery?.customer}
+                         <h2 className="text-[20px] font-bold text-slate-800 py-5">{dataDelivery?.customer}
                          </h2>
                     </header>
 

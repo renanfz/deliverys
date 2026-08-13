@@ -79,18 +79,18 @@ export const RoutePage = () => {
      return (
           <div className='h-screen w-full flex flex-col items-center p-5'>
                <div className='w-full max-w-100'>
-                    <header className='text-left mb-6'>
+                    <header className='text-left mb-9'>
                          <button
                               type='button'
                               onClick={() => navigate('/')}
                               className=' my-auto w-20 h-10 flex text gap-1'>
                               <ChevronLeft /> Rotas
                          </button>
-                         <h2 className='text-lg font-bold text-slate-800 mb-2'>{selectedRoute.city}</h2>
+                         <h2 className='text-[20px] font-bold text-slate-800 mb-1'>{selectedRoute.city}</h2>
                          <p className='text-sm text-slate-500'>
                               <span className='text-black font-medium'>{selectedRoute.completeds}</span> / {selectedRoute.total} entregas concluídas
                          </p>
-                         <div>
+                         {/* <div>
                               <div className="flex justify-between mt-5">
                                    <p>Progresso da rota</p>
                                    <p className='text-(--color-primary) font-medium'>{progress}%</p>
@@ -104,7 +104,7 @@ export const RoutePage = () => {
                              [&::-webkit-progress-value]:bg-(--color-primary)
                              [&::-moz-progress-bar]:bg-[(--color-primary)]">
                               </progress>
-                         </div>
+                         </div> */}
                     </header>
                     {/* Listagem das entregas */}
                     <div className='w-full'>
