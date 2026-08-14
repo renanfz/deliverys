@@ -1,6 +1,7 @@
 
 
-export const url = `http://localhost:3000`
+
+export const url = `${import.meta.env.VITE_API_URL}/routes`
 
 export async function getRoutes(url: string) {
 
@@ -101,7 +102,6 @@ export async function calculateDeliverys(url: string) {
           return [] // retorna vazio em caso de erro
      }
 }
-
 
 export async function changeStatus(url: string, id: string | number) {
      const delivery = await getDeliverieUnique(url, id)
