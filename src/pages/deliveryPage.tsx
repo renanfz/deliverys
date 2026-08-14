@@ -1,8 +1,8 @@
-import { ChevronLeft, CircleCheckBig, FileText, MapPin, Navigation } from "lucide-react";
-import { use, useEffect, useState } from "react";
+import { ChevronLeft, FileText, MapPin, Navigation } from "lucide-react";
+import { useEffect, useState } from "react";
 import { changeStatus, getDeliverieUnique, url } from '../services/api'
 /* import { useEffect, useState } from "react";
- */import { data, useLocation, useNavigate } from "react-router-dom";
+ */import { useLocation, useNavigate } from "react-router-dom";
 /* import { getDeliverieUnique, url } from '../services/api'
  */
 export function DeliveryPage() {

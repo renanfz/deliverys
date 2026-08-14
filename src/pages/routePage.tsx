@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { DeliveryItem } from '../components/deliveryItem'
-import { calculateDeliverys, getDeliveriesById, getRouteUnique, url } from '../services/api'
+import { getDeliveriesById, getRouteUnique, url } from '../services/api'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { ChevronLeft } from 'lucide-react'
 import type { Delivery } from '../types/index'
@@ -17,21 +17,21 @@ export const RoutePage = () => {
      const [selectedRoute, setSelectedRoute] = useState<RouteWithDeliveries | null>(null)
      const [loading, setLoading] = useState(true)
      const [error, setError] = useState<string | null>(null)
-     const [progress, setProgress] = useState<string | null>(null)
-
+/*      const [progress, setProgress] = useState<string | null>(null)
+ */
      const [searchParams] = useSearchParams()
      const routeId = searchParams.get('id')
-     const progressParam = searchParams.get('progress')
-     const navigate = useNavigate()
+/*      const progressParam = searchParams.get('progress')
+ */     const navigate = useNavigate()
 
-     useEffect(() => {
-/*           setProgress(progressParam) */
+/*      useEffect(() => {
+           setProgress(progressParam) 
           const fetchData = async () => {
                const data = await calculateDeliverys(url)
                setProgress(data.progress)
           }
           fetchData()
-     }, [progressParam])
+     }, [progressParam]) */
 
      useEffect(() => {
           if (!routeId) {

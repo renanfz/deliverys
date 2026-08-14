@@ -33,7 +33,7 @@ export type Delivery = {
   progress?: string | null
 }
 
-type Route = {
+/* type Route = {
   id: string
   city: string
   date: string
@@ -51,4 +51,4 @@ type headerRoute = {
   city: string
   completeds: number
   pendings: number
-}
+} */

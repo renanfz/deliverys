@@ -1,5 +1,5 @@
 import type { Delivery } from '../types/index'
-import { Check, Circle, CircleCheck } from "lucide-react"
+import { Circle, CircleCheck } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 
 
