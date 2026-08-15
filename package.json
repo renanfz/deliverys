@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "dev-server": "npx json-server --watch db/server.json",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",

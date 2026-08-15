@@ -1,7 +1,7 @@
 
 
 
-export const url = `${import.meta.env.VITE_API_URL}/routes`
+export const url = `${import.meta.env.VITE_API_URL}`
 
 export async function getRoutes(url: string) {
 
