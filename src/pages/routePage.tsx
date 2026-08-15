@@ -4,6 +4,7 @@ import { getDeliveriesById, getRouteUnique, url } from '../services/api'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { ChevronLeft } from 'lucide-react'
 import type { Delivery } from '../types/index'
+import { Spinner } from '../components/spinner'
 
 type RouteWithDeliveries = {
      id: string
@@ -17,21 +18,21 @@ export const RoutePage = () => {
      const [selectedRoute, setSelectedRoute] = useState<RouteWithDeliveries | null>(null)
      const [loading, setLoading] = useState(true)
      const [error, setError] = useState<string | null>(null)
-/*      const [progress, setProgress] = useState<string | null>(null)
- */
+     /*      const [progress, setProgress] = useState<string | null>(null)
+      */
      const [searchParams] = useSearchParams()
      const routeId = searchParams.get('id')
 /*      const progressParam = searchParams.get('progress')
  */     const navigate = useNavigate()
 
-/*      useEffect(() => {
-           setProgress(progressParam) 
-          const fetchData = async () => {
-               const data = await calculateDeliverys(url)
-               setProgress(data.progress)
-          }
-          fetchData()
-     }, [progressParam]) */
+     /*      useEffect(() => {
+                setProgress(progressParam) 
+               const fetchData = async () => {
+                    const data = await calculateDeliverys(url)
+                    setProgress(data.progress)
+               }
+               fetchData()
+          }, [progressParam]) */
 
      useEffect(() => {
           if (!routeId) {
@@ -72,7 +73,7 @@ export const RoutePage = () => {
           fetchData()
      }, [routeId])
 
-     if (loading) return <div>Carregando rota...</div>
+     if (loading) return <Spinner/>
      if (error) return <div>{error}</div>
      if (!selectedRoute) return <div>Rota não encontrada</div>
 

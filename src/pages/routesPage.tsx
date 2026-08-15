@@ -9,6 +9,9 @@ export const RoutesPage = () => {
      const [routesData, setRoutesData] = useState<any[]>([])
      const [routeActive, setRouteActive] = useState(0)
 
+     const [loading, setLoading] = useState(true)
+     const [slowLoading, setSlowLoading] = useState(false)
+
      useEffect(() => {
           const total = routesData.reduce((acc, route) => acc + route.completeds, 0);
           setRouteActive(total);
@@ -17,11 +20,24 @@ export const RoutesPage = () => {
 
      useEffect(() => {
           const fetchData = async () => {
-               const data = await calculateDeliverys(url)
-               setRoutesData(data)
+               try {
+                    const data = await calculateDeliverys(url)
+                    setRoutesData(data)
+               } finally {
+                    setLoading(false)
+               }
+
           }
           fetchData()
      }, [])
+
+     useEffect(() => {
+          const timer = setTimeout(() => {
+               /* loading && setSlowLoading(true) */
+               if (loading) { setSlowLoading(true) }
+          }, 5000)
+          return () => clearTimeout(timer)
+     }, [loading])
 
      const dataFormatada = new Date().toLocaleDateString('pt-BR', {
           weekday: 'long',
@@ -42,7 +58,20 @@ export const RoutesPage = () => {
                     <div className='bg-gray-100 flex w-full p-4 rounded-(--radius-md) justify-between items-center'>
                          <Package color="#737373" />Total de entregas    15/20{ }
                     </div>
-                    <p className='py-5 text-(--color-text-secondary) font-medium'>{ routeActive} 3 ROTAS ATIVAS</p>
+                    <p className={`py-5 text-(--color-text-secondary) font-medium ${loading && 'hidden'}`}>{routeActive} 3 ROTAS ATIVAS</p>
+
+                    {
+                         loading && (
+                              <div className='my-5 flex items-center gap-1.5'>
+                                   <span className='text-3xl'>◌</span>
+                                   {slowLoading
+                                        ? "A primeira carga pode levar alguns segundos"
+                                        : "Carregando rotas..."
+                                   }
+                              </div>
+                         )
+                    }
+
                     {routesData.map((route) => (
                          <RouteCard
                               key={route.id}
