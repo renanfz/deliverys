@@ -62,7 +62,7 @@ export const RoutesPage = () => {
      return (
           <>
                <div className="min-h-screen w-full flex flex-col items-center p-3">
-                    <div className="w-full max-w-100 flex flex-col grow">
+                    <div className="w-full max-w-sm flex flex-col grow">
                          <header className="mb-3 flex flex-col items-start">
                               {/* <p className='font-medium text-(--color-text-secondary)'>{dateFormated}</p> */}
                               <div className="flex items-center gap-1.5">
@@ -87,10 +87,10 @@ export const RoutesPage = () => {
                          <hr className="mb-8 border-t border-(--color-border)" />
 
                          {/* Conteúdo principal */}
-                         <main className="flex-grow">
+                         <main className="grow">
                               <div
-                                   className={`bg-gray-100 flex w-full p-4 rounded-(--radius-md) justify-between items-center shadow-sm ${loading && "hidden"
-                                        }`}
+                                   className={`bg-gray-100 flex w-full max-w-sm p-4 rounded-(--radius-md) justify-between items-center shadow-sm ${loading && "hidden"}
+                                        `}
                               >
                                    <Package color="#737373" />Total de entregas {completedDeliverys} /{" "}
                                    {totalDeliverys}
