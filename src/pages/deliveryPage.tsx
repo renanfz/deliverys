@@ -69,11 +69,7 @@ export function DeliveryPage() {
 
 
      if (loading) {
-          return (
-               <div className="h-screen flex items-center justify-center">
-                    <div className="w-8 h-8 border-4 border-gray-200 border-t-gray-700 rounded-full animate-spin" />
-               </div>
-          )
+          return <Spinner></Spinner>
      }
 
      if (error) {
@@ -114,9 +110,9 @@ export function DeliveryPage() {
                          <span
                               className={`text-sm text-slate-500 p-3 py-1 rounded-sm w-fit
                               ${dataDelivery.status === 'pending'
-                                   ? 'bg-gray-100'
-                                   : 'bg-(--color-primary-light) text-(--color-primary)'
-                              }`}
+                                        ? 'bg-gray-100'
+                                        : 'bg-(--color-primary-light) text-(--color-primary)'
+                                   }`}
                          >
                               {dataDelivery.status}
                          </span>
@@ -149,7 +145,7 @@ export function DeliveryPage() {
 
                     <div className="bg-gray-100 p-4 flex items-center gap-3 rounded-md shadow-sm">
 
-                         <FileText color="#000000" />
+                         <FileText className="w-5 h-5" />
 
                          <div className="flex flex-col">
 
@@ -169,7 +165,7 @@ export function DeliveryPage() {
                     <section className="flex items-center gap-3 w-full max-w-md mt-3 justify-between">
 
                          <button
-                              className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-sm justify-center w-full"
+                              className="flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-sm justify-center w-full"
                          >
                               <FileText className="text-black w-5 h-5" />
 
@@ -187,7 +183,7 @@ export function DeliveryPage() {
                                    )
                               }
                               type="button"
-                              className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-sm justify-center w-full"
+                              className="flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-sm justify-center w-full"
                          >
                               <Navigation className="text-black w-5 h-5" />
 
