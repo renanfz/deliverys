@@ -48,9 +48,6 @@ export const RoutesPage = () => {
           return () => clearTimeout(timer)
      }, [loading])
 
-     /*      const calculateRoutesActive = () => {
-     
-          } */
 
 /*      const dataFormatada = new Date().toLocaleDateString('pt-BR', {
           weekday: 'long',
@@ -67,7 +64,7 @@ export const RoutesPage = () => {
                               {/* <p className='font-medium text-(--color-text-secondary)'>{dateFormated}</p> */}
                               <div className="flex items-center gap-1.5">
                                    <img
-                                        src="./public/logo-rotab.png"
+                                        src="./logo-rotab.png"
                                         alt=""
                                         width={55}
                                         className="rounded-full"
