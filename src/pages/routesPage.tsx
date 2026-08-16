@@ -9,8 +9,8 @@ import Footer from '../components/footer'
 export const RoutesPage = () => {
      const [routesData, setRoutesData] = useState<any[]>([])
      const [routeActive, setRouteActive] = useState(0)
-     const [totalDeliverys, setTotalDeliverys] = useState(0)
-     const [completedDeliverys, setCompletedDeliverys] = useState(0)
+     const [totalDeliverys, setTotalDeliverys] = useState<number | null>(null);
+     const [completedDeliverys, setCompletedDeliverys] = useState<number | null>(null);
 
      const [loading, setLoading] = useState(true)
      const [slowLoading, setSlowLoading] = useState(false)
@@ -49,18 +49,18 @@ export const RoutesPage = () => {
      }, [loading])
 
 
-/*      const dataFormatada = new Date().toLocaleDateString('pt-BR', {
-          weekday: 'long',
-          day: 'numeric',
-          month: 'long'
-     });
-     const dateFormated = dataFormatada.replace(/(^\w|\s\w)/g, m => m.toUpperCase())
- */
+     /*      const dataFormatada = new Date().toLocaleDateString('pt-BR', {
+               weekday: 'long',
+               day: 'numeric',
+               month: 'long'
+          });
+          const dateFormated = dataFormatada.replace(/(^\w|\s\w)/g, m => m.toUpperCase())
+      */
      return (
           <>
                <div className="min-h-screen w-full flex flex-col items-center p-3">
                     <div className="w-full max-w-sm flex flex-col grow">
-                         <header className="mb-3 flex flex-col items-start">
+                         <header className="mb-3 mt-2 flex flex-col items-start">
                               {/* <p className='font-medium text-(--color-text-secondary)'>{dateFormated}</p> */}
                               <div className="flex items-center gap-1.5">
                                    <img
@@ -85,13 +85,13 @@ export const RoutesPage = () => {
 
                          {/* Conteúdo principal */}
                          <main className="grow">
-                              <div
-                                   className={`bg-gray-100 flex w-full max-w-sm p-4 rounded-md justify-between items-center shadow-sm ${loading && "hidden"}
-                                        `}
-                              >
-                                   <Package color="#737373" />Total de entregas {completedDeliverys} /{" "}
-                                   {totalDeliverys}
-                              </div>
+                              {!loading && (
+                                   <div className="bg-gray-100 flex w-full p-4 rounded-md justify-between items-center shadow-sm">
+                                        <Package color="#737373" />
+                                        Total de entregas {completedDeliverys} / {totalDeliverys}
+                                   </div>
+                              )}
+
 
                               <p
                                    className={`py-5 text-(--color-text-secondary) font-bold ${loading && "hidden"
