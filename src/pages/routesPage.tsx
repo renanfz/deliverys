@@ -4,6 +4,7 @@ import { RouteCard } from '../components/routeCard'
 import { calculateDeliverys, url } from '../services/api'
 import { Package } from 'lucide-react'
 import '../index.css'
+import Footer from '../components/footer'
 
 export const RoutesPage = () => {
      const [routesData, setRoutesData] = useState<any[]>([])
@@ -59,42 +60,75 @@ export const RoutesPage = () => {
      const dateFormated = dataFormatada.replace(/(^\w|\s\w)/g, m => m.toUpperCase())
 
      return (
-          <div className="h-screen w-full flex flex-col items-center p-5">
-               <div className="w-full max-w-100">
-                    <header className="mb-10 bg-(--color-primary)">
-                         <p className='font-medium text-(--color-text-secondary)'>{dateFormated}</p>
-                         <h1 className="font-bold text-[1.7rem] leading-8.5 py-2">Rota B</h1>
-                         <p className='text-(--color-text-secondary)'>Rotas do dia</p>
-                    </header>
-                    <hr className='mb-8 border-t border-(--color-border)' />
-                    <div className='bg-gray-100 flex w-full p-4 rounded-(--radius-md) justify-between items-center'>
-                         <Package color="#737373" />Total de entregas {completedDeliverys} / {totalDeliverys}
-                    </div>
-                    <p className={`py-5 text-(--color-text-secondary) font-medium ${loading && 'hidden'}`}>{routeActive} ROTAS ATIVAS</p>
-
-                    {
-                         loading && (
-                              <div className='my-5 flex items-center gap-1.5'>
-                                   <span className='text-3xl'>◌</span>
-                                   {slowLoading
-                                        ? "A primeira carga pode levar alguns segundos"
-                                        : "Carregando rotas..."
-                                   }
+          <>
+               <div className="min-h-screen w-full flex flex-col items-center p-3">
+                    <div className="w-full max-w-100 flex flex-col flex-grow">
+                         <header className="mb-3 flex flex-col items-start">
+                              {/* <p className='font-medium text-(--color-text-secondary)'>{dateFormated}</p> */}
+                              <div className="flex items-center gap-1.5">
+                                   <img
+                                        src="./public/logo-rotab.png"
+                                        alt=""
+                                        width={55}
+                                        className="rounded-full"
+                                   />
+                                   <div>
+                                        <h1 className="font-bold text-[1.5rem] leading-6.5 font-mono">
+                                             Rota B
+                                        </h1>
+                                        <span className="text-(--color-text-secondary)">
+                                             Controle de Entregas
+                                        </span>
+                                   </div>
                               </div>
-                         )
-                    }
+                              {/* <p className='text-(--color-text-secondary)'>Rotas do dia</p> */}
+                         </header>
 
-                    {routesData.map((route) => (
-                         <RouteCard
-                              key={route.id}
-                              id={route.id}
-                              city={route.city}
-                              deliveryes={route.total}
-                              completeds={route.completeds}
-                              progress={route.progress} routeId={''} />
-                    ))}
+                         <hr className="mb-8 border-t border-(--color-border)" />
+
+                         {/* Conteúdo principal */}
+                         <main className="flex-grow">
+                              <div
+                                   className={`bg-gray-100 flex w-full p-4 rounded-(--radius-md) justify-between items-center shadow-sm ${loading && "hidden"
+                                        }`}
+                              >
+                                   <Package color="#737373" />Total de entregas {completedDeliverys} /{" "}
+                                   {totalDeliverys}
+                              </div>
+
+                              <p
+                                   className={`py-5 text-(--color-text-secondary) font-bold ${loading && "hidden"
+                                        }`}
+                              >
+                                   {routeActive} ROTAS ATIVAS
+                              </p>
+
+                              {loading && (
+                                   <div className="my-5 flex items-center gap-1.5">
+                                        <span className="text-3xl">◌</span>
+                                        {slowLoading
+                                             ? "A primeira carga pode levar alguns segundos"
+                                             : "Carregando rotas..."}
+                                   </div>
+                              )}
+
+                              {routesData.map((route) => (
+                                   <RouteCard
+                                        key={route.id}
+                                        id={route.id}
+                                        city={route.city}
+                                        deliveryes={route.total}
+                                        completeds={route.completeds}
+                                        progress={route.progress}
+                                        routeId={""}
+                                   />
+                              ))}
+                         </main>
+                         <Footer />
+                    </div>
                </div>
-          </div>
+          </>
+     );
 
-     )
+
 }

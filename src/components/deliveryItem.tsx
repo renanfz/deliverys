@@ -12,11 +12,11 @@ export const DeliveryItem = ({ id, customer, order, routeId, address, nfe, latit
 
                className="flex items-center rounded-md bg-gray-100 p-3 mb-2.5 w-full shadow-sm ">
                <span
-                    className={`flex text-sm font-medium text-slate-600 mr-4  h-8 w-8 items-center justify-center rounded-sm ${status === 'pending' ? 'bg-white' : 'bg-(--color-primary-light)'}`}>{order}
+                    className={`flex text-sm font-medium bg-white mr-4  h-8 w-8 items-center justify-center rounded-sm ${status === 'pending' ? 'text-slate-600' : 'text-(--color-primary)'}`}>{order}
                </span>
                <p className="text-base font-normal text-slate-800">{customer}</p>
                <span className='flex ml-auto'>
-                    {status === 'pending' ? <Circle color="#cacaca" /> : <CircleCheck color="#16A34A" />}
+                    {status === 'pending' ? <Circle color="#cacaca" /> : <CircleCheck className="text-(--color-primary)" />}
                </span>
           </article>
      )

@@ -165,7 +165,7 @@ export function DeliveryPage() {
                     <section className="flex items-center gap-3 w-full max-w-md mt-3 justify-between">
 
                          <button
-                              className="flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-sm justify-center w-full"
+                              className="flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-sm justify-center w-full hover:cursor-pointer"
                          >
                               <FileText className="text-black w-5 h-5" />
 
@@ -183,7 +183,7 @@ export function DeliveryPage() {
                                    )
                               }
                               type="button"
-                              className="flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-sm justify-center w-full"
+                              className="flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-sm justify-center w-full hover:cursor-pointer"
                          >
                               <Navigation className="text-black w-5 h-5" />
 
