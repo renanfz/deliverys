@@ -91,7 +91,7 @@ export function DeliveryPage() {
 
      return (
           <div className="h-screen w-full flex flex-col items-center p-4">
-               <div className="w-full max-w-[400px]">
+               <div className="w-full max-w-100">
 
                     <header className="text-left mb-6">
 

@@ -89,7 +89,7 @@ export const RoutesPage = () => {
                          {/* Conteúdo principal */}
                          <main className="grow">
                               <div
-                                   className={`bg-gray-100 flex w-full max-w-sm p-4 rounded-(--radius-md) justify-between items-center shadow-sm ${loading && "hidden"}
+                                   className={`bg-gray-100 flex w-full max-w-sm p-4 rounded-md justify-between items-center shadow-sm ${loading && "hidden"}
                                         `}
                               >
                                    <Package color="#737373" />Total de entregas {completedDeliverys} /{" "}
