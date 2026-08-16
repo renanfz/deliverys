@@ -52,17 +52,17 @@ export const RoutesPage = () => {
      
           } */
 
-     const dataFormatada = new Date().toLocaleDateString('pt-BR', {
+/*      const dataFormatada = new Date().toLocaleDateString('pt-BR', {
           weekday: 'long',
           day: 'numeric',
           month: 'long'
      });
      const dateFormated = dataFormatada.replace(/(^\w|\s\w)/g, m => m.toUpperCase())
-
+ */
      return (
           <>
                <div className="min-h-screen w-full flex flex-col items-center p-3">
-                    <div className="w-full max-w-100 flex flex-col flex-grow">
+                    <div className="w-full max-w-100 flex flex-col grow">
                          <header className="mb-3 flex flex-col items-start">
                               {/* <p className='font-medium text-(--color-text-secondary)'>{dateFormated}</p> */}
                               <div className="flex items-center gap-1.5">
