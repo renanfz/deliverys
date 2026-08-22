@@ -1,5 +1,5 @@
 import { ChevronLeft, FileText, MapPin, Navigation } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { changeStatus, getDeliverieUnique, url } from '../services/api'
 /* import { useEffect, useState } from "react";
  */import { useLocation, useNavigate } from "react-router-dom";
@@ -12,6 +12,7 @@ export function DeliveryPage() {
 
      const [loading, setLoading] = useState(true)
      const [updatingStatus, setUpdatingStatus] = useState(false)
+     const updatingStatusRef = useRef(false)
      const [error, setError] = useState<string | null>(null)
 
      const idReq = location.state?.id
@@ -20,43 +21,62 @@ export function DeliveryPage() {
           useState<Record<string, any> | null>(null)
 
      useEffect(() => {
+          let isActive = true
+
           const fetchData = async () => {
+               if (!idReq) {
+                    setError('Entrega não encontrada.')
+                    setLoading(false)
+                    return
+               }
+
                try {
-                    setLoading(true)
-                    setError(null)
+                    if (isActive) {
+                         setLoading(true)
+                         setError(null)
+                    }
 
                     const delivery = await getDeliverieUnique(url, idReq)
 
-                    setDataDelivery(delivery)
+                    if (isActive) {
+                         setDataDelivery(delivery)
+                    }
 
                } catch (error) {
-                    setError('Não foi possível carregar a entrega.')
+                    if (isActive) {
+                         setError('Não foi possível carregar a entrega.')
+                    }
                } finally {
-                    setLoading(false)
+                    if (isActive) {
+                         setLoading(false)
+                    }
                }
           }
 
           fetchData()
+
+          return () => {
+               isActive = false
+          }
      }, [idReq])
 
 
      async function handleChangeStatus() {
-          if (!dataDelivery?.id || updatingStatus) return
+          if (!dataDelivery?.id || dataDelivery.status !== 'pending' || updatingStatusRef.current) return
 
           try {
+               updatingStatusRef.current = true
                setUpdatingStatus(true)
                setError(null)
 
-               await changeStatus(url, dataDelivery.id)
+               const updatedDelivery = await changeStatus(url, dataDelivery.id)
 
-               setDataDelivery(prev => ({
-                    ...prev!,
-                    status: 'completed'
-               }))
+               setDataDelivery(updatedDelivery)
 
-          } catch (error) {
+          } catch {
                setError('Não foi possível atualizar a entrega.')
           } finally {
+               updatingStatusRef.current = false
                setUpdatingStatus(false)
           }
      }

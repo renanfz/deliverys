@@ -104,9 +104,12 @@ export async function calculateDeliverys(url: string) {
 }
 
 export async function changeStatus(url: string, id: string | number) {
-     const delivery = await getDeliverieUnique(url, id)
-
      try {
+          const delivery = await getDeliverieUnique(url, id)
+          if (!delivery) {
+               throw new Error('Entrega não encontrada')
+          }
+
           const response = await fetch(`${url}/deliveries/${id}`, {
                method: 'PATCH',
                headers: { "Content-Type": "application/json" },
@@ -118,7 +121,8 @@ export async function changeStatus(url: string, id: string | number) {
           const data = await response.json()
           return data
      } catch (error) {
-          console.info('erro')
+          console.error('Erro ao alterar status da entrega', error)
+          throw error
      }
 
 
