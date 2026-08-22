@@ -59,7 +59,7 @@ export const RoutesPage = () => {
      return (
           <>
                <div className="min-h-screen w-full flex flex-col items-center p-3">
-                    <div className="w-full max-w-sm flex flex-col grow">
+                    <div className="w-[92vw] max-w-[450px] flex flex-col grow">
                          <header className="mb-3 mt-2 flex flex-col items-start">
                               {/* <p className='font-medium text-(--color-text-secondary)'>{dateFormated}</p> */}
                               <div className="flex items-center gap-1.5">
@@ -101,7 +101,7 @@ export const RoutesPage = () => {
                               </p>
 
                               {loading && (
-                                   <div className="my-5 flex items-center gap-1.5">
+                                   <div className=" flex items-center gap-1.5">
                                         <span className="text-3xl">◌</span>
                                         {slowLoading
                                              ? "A primeira carga pode levar alguns segundos"

@@ -91,7 +91,7 @@ export function DeliveryPage() {
 
      return (
           <div className="h-screen w-full flex flex-col items-center p-4">
-               <div className="w-full max-w-100">
+               <div className="w-[92vw] max-w-[450px]">
 
                     <header className="text-left mb-6">
 
@@ -166,10 +166,13 @@ export function DeliveryPage() {
 
                          <button
                               className="flex items-center gap-2 px-4 py-3 border border-gray-300 rounded-sm justify-center w-full hover:cursor-pointer"
+                              onClick={() => {
+                                   alert('Função disponivel em breve')
+                              }}
                          >
-                              <FileText className="text-black w-5 h-5" />
+                              <FileText className="text-gray-300 w-5 h-5" />
 
-                              <span className="text-sm font-medium text-gray-800">
+                              <span className="text-sm font-medium text-gray-300">
                                    Visualizar NFe
                               </span>
                          </button>

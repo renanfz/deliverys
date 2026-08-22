@@ -79,7 +79,7 @@ export const RoutePage = () => {
 
      return (
           <div className='h-screen w-full flex flex-col items-center p-5'>
-               <div className='w-full max-w-100'>
+               <div className='w-[92vw] max-w-[450px]'>
                     <header className='text-left mb-9'>
                          <button
                               type='button'
