@@ -8,7 +8,7 @@ export const DeliveryItem = ({ id, customer, order, routeId, address, nfe, latit
 
      return (
           <article
-               onClick={() => navigate('/delivery', { state: { id, customer, order, routeId, address, nfe, latitude, longitude, status } })}
+               onClick={() => navigate(`/delivery?id=${id}`, { state: { id, customer, order, routeId, address, nfe, latitude, longitude, status } })}
 
                className="flex items-center rounded-md bg-gray-100 p-3 mb-2.5 w-full shadow-sm ">
                <span

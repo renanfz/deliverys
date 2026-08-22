@@ -3,6 +3,11 @@
 
 export const url = `${import.meta.env.VITE_API_URL}`
 
+async function parseResponse(response: Response) {
+     const text = await response.text()
+     return text ? JSON.parse(text) : null
+}
+
 export async function getRoutes(url: string) {
 
      try {
@@ -105,21 +110,18 @@ export async function calculateDeliverys(url: string) {
 
 export async function changeStatus(url: string, id: string | number) {
      try {
-          const delivery = await getDeliverieUnique(url, id)
-          if (!delivery) {
-               throw new Error('Entrega não encontrada')
-          }
-
           const response = await fetch(`${url}/deliveries/${id}`, {
                method: 'PATCH',
-               headers: { "Content-Type": "application/json" },
-               body: JSON.stringify({ status: delivery.status !== 'pending' ? 'pending': 'completed' })
+               headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+               },
+               body: JSON.stringify({ status: 'completed' }),
           })
           if (!response.ok) {
                throw new Error('Erro ao alterar status')
           }
-          const data = await response.json()
-          return data
+          return await parseResponse(response)
      } catch (error) {
           console.error('Erro ao alterar status da entrega', error)
           throw error

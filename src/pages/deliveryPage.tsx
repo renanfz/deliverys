@@ -2,20 +2,21 @@ import { ChevronLeft, FileText, MapPin, Navigation } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { changeStatus, getDeliverieUnique, url } from '../services/api'
 /* import { useEffect, useState } from "react";
- */import { useLocation, useNavigate } from "react-router-dom";
+ */import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { Spinner } from "../components/spinner";
 /* import { getDeliverieUnique, url } from '../services/api'
  */
 export function DeliveryPage() {
      const location = useLocation()
      const navigate = useNavigate()
+     const [searchParams] = useSearchParams()
 
      const [loading, setLoading] = useState(true)
      const [updatingStatus, setUpdatingStatus] = useState(false)
      const updatingStatusRef = useRef(false)
      const [error, setError] = useState<string | null>(null)
 
-     const idReq = location.state?.id
+     const idReq = location.state?.id ?? searchParams.get('id')
 
      const [dataDelivery, setDataDelivery] =
           useState<Record<string, any> | null>(null)
@@ -71,7 +72,11 @@ export function DeliveryPage() {
 
                const updatedDelivery = await changeStatus(url, dataDelivery.id)
 
-               setDataDelivery(updatedDelivery)
+               setDataDelivery((current) => ({
+                    ...current,
+                    ...(updatedDelivery ?? {}),
+                    status: 'completed',
+               }))
 
           } catch {
                setError('Não foi possível atualizar a entrega.')
