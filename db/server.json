@@ -46,7 +46,7 @@
       "address": "Rua Bela Vista, 7 - Campo Alegre, Bom Repouso - MG",
       "latitude": -22.4741,
       "longitude": -46.1415,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125875
     },
     {
@@ -57,7 +57,7 @@
       "address": "Praça Central, 45 - Centro, Bom Repouso - MG",
       "latitude": -22.4779,
       "longitude": -46.1438,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125876
     },
     {
@@ -68,7 +68,7 @@
       "address": "Rua do Comércio, 88 - Centro, Bom Repouso - MG",
       "latitude": -22.4765,
       "longitude": -46.145,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125877
     },
     {
@@ -79,7 +79,7 @@
       "address": "Avenida principal, 200 - Centro, Bom Repouso - MG",
       "latitude": -22.4782,
       "longitude": -46.1462,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125878
     },
     {
@@ -90,7 +90,7 @@
       "address": "Avenida principal, 200 - Centro, Bom Repouso - MG",
       "latitude": -22.4782,
       "longitude": -46.1462,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125878
     },
     {
@@ -112,7 +112,7 @@
       "address": "Rua Francisco Júlio Pereira, 50 - Santa Fé, Pouso Alegre - MG",
       "latitude": -22.2471,
       "longitude": -45.9412,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125880
     },
     {
@@ -123,7 +123,7 @@
       "address": "Rodovia Fernão Dias, Km 851 - Zona Industrial, Pouso Alegre - MG",
       "latitude": -22.2615,
       "longitude": -45.955,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125881
     },
     {
@@ -134,7 +134,7 @@
       "address": "Avenida Adalberto Ferraz, 47 - Centro, Pouso Alegre - MG",
       "latitude": -22.2301,
       "longitude": -45.9342,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125882
     },
     {
@@ -145,7 +145,7 @@
       "address": "Avenida Prefeito Tuany Toledo, 301 - Fátima, Pouso Alegre - MG",
       "latitude": -22.2255,
       "longitude": -45.9188,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125883
     },
     {
@@ -156,7 +156,7 @@
       "address": "Avenida Perimetral Pedro Pereira Borges, 10 - Centro, Estiva - MG",
       "latitude": -22.4642,
       "longitude": -46.021,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125884
     },
     {
@@ -167,7 +167,7 @@
       "address": "Rua Ver. José Ferreira, 45 - Centro, Estiva - MG",
       "latitude": -22.465,
       "longitude": -46.0195,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125885
     },
     {
@@ -211,7 +211,7 @@
       "address": "Avenida do Carmo, 320 - Centro, Cambuí - MG",
       "latitude": -22.6105,
       "longitude": -46.0592,
-      "status": "completed",
+      "status": "pending",
       "nfe": 125889
     },
     {
