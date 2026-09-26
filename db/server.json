@@ -313,6 +313,5 @@
       "status": "pending",
       "nfe": 125898
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
